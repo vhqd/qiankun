@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import store from "./store";
 
 // Vue.config.productionTip = false
 
@@ -8,6 +9,7 @@ let instance = null;
 function render(props) {
   instance = new Vue({
     router,
+    store,
     render: (h) => h(App),
   }).$mount("#app"); // 这里是挂载到自己的html中  基座会拿到这个挂载后的html 将其插入进去
 }
@@ -25,6 +27,7 @@ export async function mount(props) {
   props.onGlobalStateChange((state, prev) => {
     // state: 变更后的状态; prev 变更前的状态
     console.log("子二:", "改变后=>", state, "改变前=>", prev);
+    store.commit("SET_TEST", state);
   });
   props.setGlobalState({ a: 20 });
 
