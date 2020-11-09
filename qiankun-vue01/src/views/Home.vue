@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    {{ $store.state.test.a }}<img alt="Vue logo" src="../assets/logo.png" />
+    111111 <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>

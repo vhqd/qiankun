@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    默认的base
-  </div>
+    <div class="home">
+        默认的base
+    </div>
 </template>
 
 <script>
@@ -9,9 +9,9 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
+    name: "Home",
+    components: {
+        HelloWorld
+    }
 };
 </script>
